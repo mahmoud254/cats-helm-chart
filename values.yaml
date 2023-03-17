@@ -1,0 +1,104 @@
+# Default values for chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 454717754853.dkr.ecr.eu-central-1.amazonaws.com/backend-dev
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "2023-03-16.17.14.33.27ae062c"
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: NodePort
+  port: 3000
+
+ingress:
+  enabled: true
+  className: "alb"
+  annotations: 
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: instance
+  hosts:
+    - paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+secret:
+  name: nodejs-backend-prod
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+externalSecrets:
+  region: eu-central-1
+  type: secretsManager
+  body:
+    - key: mahmoud-alaa-test-secret
+      name: PORT
+      property: PORT
+    - key: mahmoud-alaa-test-secret
+      name: MONGOOSE_URL
+      property: MONGOOSE_URL
+    - key: mahmoud-alaa-test-secret
+      name: ACCESS_KEY_ID
+      property: ACCESS_KEY_ID
+    - key: mahmoud-alaa-test-secret
+      name: SECRET_ACCESS_KEY
+      property: SECRET_ACCESS_KEY
+    - key: mahmoud-alaa-test-secret
+      name: REGION
+      property: REGION
+    - key: mahmoud-alaa-test-secret
+      name: BUCKET_NAME
+      property: BUCKET_NAME
+    - key: mahmoud-alaa-test-secret
+      name: REDIS_URL
+      property: REDIS_URL
+    - key: mahmoud-alaa-test-secret
+      name: EXPIRY
+      property: EXPIRY
+
