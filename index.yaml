@@ -3,12 +3,32 @@ entries:
   soum-cats-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-03-17T22:04:50.93560746+02:00"
+    created: "2023-03-17T22:22:27.733125299Z"
     description: A Helm chart for Kubernetes
-    digest: 5f87ceaed61538475c1953759efebdef4f23574cbc3d343f951fc14688212fa3
+    digest: 8e92abf01ee765bc3d91c082e86c4e768399d19fe8124c0c0895dd80964ec211
+    name: soum-cats-app
+    type: application
+    urls:
+    - https://mahmoud254.github.io/cats-helm-chart/soum-cats-app-24.tgz
+    version: "24"
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-17T22:22:27.731488988Z"
+    description: A Helm chart for Kubernetes
+    digest: 0a8279e7fee745ea4e33b22b220b4a2cf479a03284f0a35c012be103e3aa46ab
+    name: soum-cats-app
+    type: application
+    urls:
+    - https://mahmoud254.github.io/cats-helm-chart/soum-cats-app-0.1.25.tgz
+    version: 0.1.25
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-17T22:22:27.729116206Z"
+    description: A Helm chart for Kubernetes
+    digest: 2a78b776aa8c646cf398bf0db239658271438df34f88df5d4c8e03d2f041b93d
     name: soum-cats-app
     type: application
     urls:
     - https://mahmoud254.github.io/cats-helm-chart/soum-cats-app-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-17T22:04:50.934803229+02:00"
+generated: "2023-03-17T22:22:27.727536667Z"
