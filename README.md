@@ -4,7 +4,7 @@
 
 # 1. Create GitHub Pages once the code is pushed to GitHub
 Go to settings of your GitHub repository -> Pages:
-![Alt text](./docs/gh_pages.png?raw=true "Architecture")
+![Alt text](./gh_pages.png?raw=true "Architecture")
 
 Select your branch in the Source section.
 
