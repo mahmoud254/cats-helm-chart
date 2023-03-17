@@ -6,6 +6,7 @@
 Go to settings of your GitHub repository -> Pages:
 ![Alt text](./gh_pages.png?raw=true "Architecture")
 
+
 Select your branch in the Source section.
 
 Click on Save.
