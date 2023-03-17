@@ -9,6 +9,6 @@ entries:
     name: soum-cats-app
     type: application
     urls:
-    - https://github.com/mahmoud254/cats-helm-chart/soum-cats-app-0.1.0.tgz/soum-cats-app-0.1.0.tgz
+    - https://mahmoud254.github.io/cats-helm-chart/soum-cats-app-0.1.0.tgz
     version: 0.1.0
 generated: "2023-03-17T22:04:50.934803229+02:00"
